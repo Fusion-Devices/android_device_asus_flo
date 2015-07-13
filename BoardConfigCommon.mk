@@ -31,9 +31,22 @@ BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=flo andro
 BOARD_KERNEL_CMDLINE += vmalloc=340M
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000
 
+# Fusion Optimizations
+FUSION_OPT := true
+FUSION_OFAST := true
+FUSION_STRICT := true
+FUSION_KRAIT := true
+FUSION_GRAPHITE := true
+FUSION_PIPE := true
+FUSION_ENABLE_GCCONLY := true
+FLOOP_NEST_OPTIMIZE := true
+FUSION_FFAST_MATH := true
+TARGET_FUSION_ROM := 4.9
+TARGET_FUSION_KERNEL := 6.0-sm
+
 # Try to build the kernel
-TARGET_KERNEL_SOURCE := kernel/google/msm
-TARGET_KERNEL_CONFIG := cyanogen_flo_defconfig
+TARGET_KERNEL_SOURCE := kernel/asus/flo
+TARGET_KERNEL_CONFIG := vindicator_defconfig
 
 BOARD_USES_ALSA_AUDIO:= true
 BOARD_USES_LEGACY_ALSA_AUDIO:= false
@@ -149,4 +162,18 @@ BOARD_SEPOLICY_UNION += \
 # Include an expanded selection of fonts
 EXTENDED_FONT_FOOTPRINT := true
 
+# TWRP
+TARGET_RECOVERY_DEVICE_DIRS := device/asus/flo
+DEVICE_RESOLUTION := 1920x1200
+TW_INCLUDE_CRYPTO := true
+TW_INCLUDE_L_CRYPTO := true
+BOARD_HAS_NO_REAL_SDCARD := true
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+TARGET_RECOVERY_PIXEL_FORMAT := "RGB_565"
+TW_SCREEN_BLANK_ON_BOOT := true
+TARGET_RECOVERY_FSTAB = device/asus/flo/fstab.flo
+
+
 -include vendor/asus/flo/BoardConfigVendor.mk
+#SaberMod
+-include vendor/fusion/config/sm.mk

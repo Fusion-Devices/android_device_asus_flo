@@ -4,17 +4,17 @@ TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1200
 
 # Inherit some common CYANIDE stuff.
-$(call inherit-product, vendor/cyanide/config/common_full_tablet_wifionly.mk)
+$(call inherit-product, vendor/fusion/config/common_tablet.mk)
 
 # Enhanced NFC
-$(call inherit-product, vendor/cyanide/config/nfc_enhanced.mk)
+$(call inherit-product, vendor/fusion/config/nfc_enhanced.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/asus/flo/full_flo.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := flo
-PRODUCT_NAME := cyanide_flo
+PRODUCT_NAME := flo
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Nexus 7
 PRODUCT_MANUFACTURER := asus

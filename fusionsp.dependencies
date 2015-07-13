@@ -1,0 +1,14 @@
+[
+  {
+    "remote": "github",
+    "repository": "Tk-Glitch/Glitch_Flo_AOSP",
+    "target_path": "kernel/asus/flo",
+    "revision": "cm12"
+  },
+  {
+    "remote": "fs-dev",
+    "repository": "android_vendor_asus",
+    "target_path": "vendor/asus",
+    "revision": "lp5.1"
+  }
+]
