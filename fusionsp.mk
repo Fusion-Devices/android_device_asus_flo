@@ -3,7 +3,7 @@
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1200
 
-# Inherit some common CYANIDE stuff.
+# Inherit some common Fusion stuff.
 $(call inherit-product, vendor/fusion/config/common_tablet.mk)
 
 # Enhanced NFC
