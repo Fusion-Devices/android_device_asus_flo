@@ -46,8 +46,8 @@ TARGET_FUSION_KERNEL := 6.0-sm
 
 # Try to build the kernel
 TARGET_KERNEL_SOURCE := kernel/asus/flo
-TARGET_KERNEL_CONFIG := vindicator_defconfig
-
+TARGET_KERNEL_CONFIG := Glitch_flo_defconfig
+TARGET_USE_ION_COMPAT := true
 BOARD_USES_ALSA_AUDIO:= true
 BOARD_USES_LEGACY_ALSA_AUDIO:= false
 BOARD_USES_FLUENCE_INCALL := true
